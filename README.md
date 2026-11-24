@@ -86,5 +86,4 @@ values like `OH-01`); dates → `DATE`; numbers → `DOUBLE`; trimmed text; `Tim
 * Spark runs with `local[*]` by default. Set `SPARK_MASTER="yarn"` in `config.env` to run on YARN.
 * The raw Hive table uses `OpenCSVSerde` because some project names contain commas.
 * All Hive tables are `EXTERNAL`, so `05_hive_ddl.hql` can be re-run without losing data.
-* Step 7 uses Spark Structured Streaming's file source, so no Kafka is needed. A real
-  deployment would put Kafka (or Flume) in place of `replay_timesheets.py`.
+* Step 7 uses Spark Structured Streaming's file source.
